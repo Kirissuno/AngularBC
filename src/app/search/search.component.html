@@ -1,0 +1,11 @@
+<h1>Buscador</h1>
+<div class="text-center">
+    <form>
+        <input class="form-control" type="text" name="query" [(ngModel)]="query" />
+        <input type="submit" class="mt-1 btn btn-primary" value="Buscar" (click)="search()" />
+        <p>Parametro de búsqueda: <span [innerHTML]="query"></span></p>
+        <p>Resultado: <span [innerHTML]="result"></span></p>
+    </form>
+
+    <!-- <pre>Sho soy <span [innerHTML]="nombre"></span> <span [innerHTML]="surname"></span></pre> -->
+</div>

@@ -1,0 +1,17 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Calle</th>
+            <th>Numero</th>
+            <th>CP</th>
+        </tr>
+    </thead>
+    <tbody>
+        <td><span [innerHTML]="direccion.calle"></span></td>
+        <td>
+            <span *ngIf="direccion.numero" [innerHTML]="direccion.numero"></span>
+            <span *ngIf="!direccion.numero">S/N</span>
+        </td>
+        <td><span [innerHTML]="direccion.codp"></span></td>
+    </tbody>
+</table>

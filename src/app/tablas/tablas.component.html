@@ -1,0 +1,25 @@
+<table class="table table-dark table-striped text-center">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Edad</th>
+            <th>Direccion</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let persona of elements; index as i">
+            <td><span [innerHTML]="persona.nombre"></span></td>
+            <td><span [innerHTML]="persona.apellidos"></span></td>
+            <td><span [innerHTML]="persona.edad"></span></td>
+            <td class="text-dark">
+                <app-tablas-elem [direccion]="persona.direccion" (paridad)="getParidad($event)"></app-tablas-elem>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<button (click)="borrar()" class="btn btn-primary">Eliminar último</button>
+<hr>
+<button (click)="ppt()" class="btn btn-primary">ppt</button>
+{{resultado}}
+<hr>

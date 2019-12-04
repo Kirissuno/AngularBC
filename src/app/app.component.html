@@ -1,0 +1,35 @@
+<div class="text-center text-black bg-primary pb-2 pt-1">
+  <h1>It's working</h1>
+  <span [innerHTML]="title"></span>
+</div>
+<!--
+<div *ngIf="aparece; else defecto">
+  <ul>
+    <li *ngFor="let numero of numeros; index as i"><span [innerHTML]="numero"></span></li>
+  </ul>
+</div>
+<br>
+<ng-template #defecto>
+  <h3><span [innerHTML]="libro.titulo"></span> del año <span [innerHTML]="libro.anio"></span></h3>
+  <br>
+  <input type="text" [(ngModel)]="libro.titulo">
+  <hr>
+</ng-template>
+
+<button class="btn btn-success" (click)="cambiar()">Toggle lista</button>
+-->
+<!-- <h3 class="text-success">Soy el padre</h3>
+<span [innerHTML]="showFullName"></span>
+
+<app-search nombre="Robert" surname="Filip" (fullName)="getFullName($event)"></app-search> -->
+
+<hr>
+<!-- <h3 class="text-success">Vuelvo a ser el padre</h3> -->
+<button [routerLink]="['search']" class="btn" routerLinkActive="router-link-active" >Buscador</button>
+<button [routerLink]="['tablas']" class="btn" routerLinkActive="router-link-active" >Tablas</button>
+
+<div class="card">
+  <div class="card-body">
+    <router-outlet></router-outlet>
+  </div>
+</div>
